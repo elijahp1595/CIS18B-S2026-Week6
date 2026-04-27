@@ -10,6 +10,10 @@ public class TypeInferenceUtilitiesDemo {
         return second;
     }
 
+    public static <T> T chooseNonNull(T first, T second) {
+        return(first != null) ? first : second;
+    }
+
     public static void main(String[] args) {
         Pair<String, Integer> studentScore = pair("Ada", 98);
         String secondName = chooseSecond("Ada", "Grace");
