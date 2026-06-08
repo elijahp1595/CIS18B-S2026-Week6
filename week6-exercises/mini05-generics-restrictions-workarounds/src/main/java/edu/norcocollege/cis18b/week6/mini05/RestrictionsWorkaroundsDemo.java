@@ -4,9 +4,14 @@ public class RestrictionsWorkaroundsDemo {
 
     public static void main(String[] args) {
         TypedRegistry registry = new TypedRegistry();
+        
+        // Generics cannot use primitive type arguments like List<int>.
+        // Use wrapper types such as Integer instead.
         registry.put("retries", 3);
         registry.put("status", "NEW");
 
+        // Cannot create a generic type with new T().
+        // Supplier<T> makes object creation explicit and safe.
         FactoryBox<String> messageFactory = new FactoryBox<>(() -> "Welcome");
 
         System.out.println("Default retries: " + registry.get("retries", Integer.class));

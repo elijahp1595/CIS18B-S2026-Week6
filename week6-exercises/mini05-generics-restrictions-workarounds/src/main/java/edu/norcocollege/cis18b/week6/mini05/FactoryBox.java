@@ -10,6 +10,7 @@ public class FactoryBox<T> {
         this.supplier = supplier;
     }
 
+    // Workaround for illegal new T(): ask the caller for a Supplier<T>.
     public T create() {
         return supplier.get();
     }
