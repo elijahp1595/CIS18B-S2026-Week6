@@ -17,6 +17,9 @@ public class WildcardsPecsClinic {
         WildcardUtils.copyAll(copySource, copiedValues);
 
         // Invariance reminder: List<Integer> is not a subtype of List<Number>.
+        // List<Integer> ints = new ArrayList<>();
+        // List<Number> num = ints; // does not compile
+
         System.out.printf("Total score: %.1f%n", total);
         System.out.println("After practice adds: " + practice);
         System.out.println("Copied values: " + copiedValues);

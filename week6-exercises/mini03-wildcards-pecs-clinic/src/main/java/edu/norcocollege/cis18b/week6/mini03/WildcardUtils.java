@@ -7,6 +7,7 @@ public final class WildcardUtils {
     private WildcardUtils() {
     }
 
+    // PECS: producer uses extends.
     public static double sumAll(List<? extends Number> values) {
         double total = 0.0;
         for (Number value : values) {
